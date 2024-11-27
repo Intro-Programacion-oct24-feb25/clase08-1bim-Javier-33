@@ -34,7 +34,12 @@ public class Ejemplo02 {
             System.out.println("Ingrese (si), (s), (yes), (y) "
                     + "si desea salir del ciclo ");
             salida = entrada.nextLine();
-            
+            /*
+            if(salida.equals("s") || salida.equals("si") || salida.equals("yes")
+                    || salida.equals("y")){
+                bandera = false;
+            }
+            */
             switch(salida){
                 case "si":
                 case "s":
@@ -45,10 +50,7 @@ public class Ejemplo02 {
                 
             }
                     
-
             
-            
-
         } while (bandera); // (bandera==true)
 
         System.out.printf("Listado de Notas\n%s\n", cadenaFinal);
