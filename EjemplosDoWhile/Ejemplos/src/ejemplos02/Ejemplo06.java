@@ -13,6 +13,7 @@
  * 2 x 10 = 20
  Atención, el límite en la solución es 10, de manera fija.
  Cambiar lo necesario para que el límite sea ingresado por el usuario. 
+Se debe usar una cadena acumuladora
  */
 package ejemplos02;
 
@@ -32,12 +33,22 @@ public class Ejemplo06 {
         int operacion;
         int contador = 1;
         int limite;
+        String cadena;
+        cadena = "";
+        System.out.println("Ingrese la tabla a generar");
+        tabla = entrada.nextInt();
+        System.out.println("Ingrese el limite");
+        limite = entrada.nextInt();
         
         do {
             operacion = tabla * contador;
-            System.out.printf("%d x %d = %d\n", tabla, contador, operacion);
+            cadena = String.format("%s%d x %d = %d\n",
+                    cadena, 
+                    tabla,
+                    contador,
+                    operacion);
             contador = contador + 1;
         } while (contador <= limite);
-
+        System.out.printf("%s", cadena);
     }
 }

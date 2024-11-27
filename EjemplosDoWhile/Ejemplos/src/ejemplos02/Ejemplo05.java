@@ -35,9 +35,8 @@ public class Ejemplo05 {
         do {
             resultado = resultado * numero;
             contador = contador + 1;
-            System.out.printf("%d\n", resultado);
         } while (contador <= potencia);
 
-       
+        System.out.printf("%d\n", resultado);
     }
 }
